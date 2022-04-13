@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:pj2/models/Users.dart';
+
 
 import 'HomePage.dart';
 
@@ -26,11 +26,6 @@ class _LoginScreenstate extends State<LoginPage> {
           padding: const EdgeInsets.all(80.0),
         child: Column(
           children:<Widget>[
-          // mainAxisAlignment: MainAxisAlignment.center,
-          //   Text(
-          //     'Welcome to Burn Calories',
-          //     style: Theme.of(context).textTheme.headline1,
-          //   ),
             Image.asset('./logo.png'),
             TextFormField(
               controller: _usernameController,
@@ -54,9 +49,6 @@ class _LoginScreenstate extends State<LoginPage> {
                 _sendDataToSecondScreen(context);
               },
               child: const Text('Login'),
-              // children: <Widget>[
-              //   Image.asset('assets/gg.png'),
-              // ],
             ),
             ElevatedButton(
                 onPressed:() {

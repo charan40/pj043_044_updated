@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
-final String a = "", b = "";
+import 'package:pj2/Screen/CurrentActivity.dart';
+
 class SelectionPage extends StatefulWidget {
-  final String text, text2;
+  final text, text2;
   const SelectionPage({key, this.text, this.text2}) : super(key: key);
-  
+ 
   @override
   State<SelectionPage> createState() => SelectionPageState();
 }
 
 class SelectionPageState extends State<SelectionPage> {
-  
+ 
   String current_location = "";
   String currentAddress = "";
   
@@ -44,7 +45,20 @@ getLocation() async {
     try {} catch (error) {
       print(error);
     }
-    // return currentLocation;
+    
+  }
+  Widget get_awinformation(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(50),
+      child: Text(
+        "Your Weight: " + widget.text + " " + "Your Age: " + widget.text2,
+        style: const TextStyle(
+          fontWeight: FontWeight.w800,
+          letterSpacing: 0.5,
+          fontSize: 30,
+        ),
+      ),
+    );
   }
 
   Widget build_get_button(BuildContext context) {
@@ -56,7 +70,7 @@ getLocation() async {
     );
     
   }
-  Widget get_current_lati_long(BuildContext context) {
+  Widget get_current_location(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(50),
       child: Text(
@@ -73,7 +87,7 @@ getLocation() async {
     return const Padding(
         padding: EdgeInsets.all(15.0),
         child: Text(
-          'Find Me',
+          'Click Here',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 24,
@@ -86,6 +100,7 @@ getLocation() async {
     return ElevatedButton(
             onPressed: () {
               Navigator.pushReplacementNamed(context, '/CurrentActivity');
+              _sendDataToSecondScreen1(context);
             },
             child: const Text('Go Calculate!'),
           );
@@ -114,10 +129,10 @@ getLocation() async {
       body: ListView(physics: const BouncingScrollPhysics(), children: <Widget>[
         Image.asset('./5.png',  height: 500,
               width: 500),
+        get_awinformation(context),
         build_heading(context),
         build_get_button(context),
-        get_current_lati_long(context),
-        // const SizedBox(height: 10),
+        get_current_location(context),
         get_current_address(context),
         go_calculate(context),
           ElevatedButton(
@@ -129,11 +144,17 @@ getLocation() async {
       ]),
     );
   }
-  
-
-  
-
-
+  void _sendDataToSecondScreen1(BuildContext context) {
+    String current_location1 = current_location;
+    String t1 = widget.text;
+    String t2 = widget.text2;
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => CurrentActivity(text: t1, text2: t2, text3: current_location1),
+        ));
+    
+  }
 }
 
 

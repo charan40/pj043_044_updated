@@ -46,21 +46,7 @@ class ActivityPage extends StatelessWidget {
                 return null;
                },
             ),
-            FloatingActionButton(
-              onPressed: () {
-              showDialog(
-              context: context,
-              builder: (context) {
-                return AlertDialog(
-                    content: Text(AgeController.text),
-                    
-              );
-            },
-          );
-        },
-        tooltip: 'Show me the value!',
-        child: const Icon(Icons.text_fields),
-      ),
+         
             ElevatedButton(
               onPressed: () {
                 Navigator.pushReplacementNamed(context, '/SelectionPage');
@@ -90,4 +76,5 @@ void _sendDataToSecondScreen1(BuildContext context) {
         MaterialPageRoute(
           builder: (context) => SelectionPage(text: textToSend, text2: textToSend2),
         ));
+    
   }
