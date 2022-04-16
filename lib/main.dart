@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pj2/Screen/LoginPage.dart';
-import 'package:pj2/Screen/RegisterationPage.dart';
+import 'package:pj2/Screen/About.dart';
 import 'package:pj2/Screen/HomePage.dart';
 import 'package:pj2/Screen/ActivityPage.dart';
 import 'package:pj2/Screen/SelectionPage.dart';
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const LoginPage(),
-        '/RegistrationPage': (context) => const RegistrationPage(),
+        '/AboutUs': (context) => const AboutUs(),
         '/HomePage': (context) => const HomePage(),
         '/Activity': (context) => const ActivityPage(),
         '/SelectionPage': (context) => const SelectionPage(),

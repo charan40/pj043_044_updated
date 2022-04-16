@@ -1,25 +1,19 @@
 import 'package:flutter/material.dart';
 
-class RegistrationPage extends StatelessWidget {
-  const RegistrationPage({key}) : super(key: key);
+class AboutUs extends StatelessWidget {
+  const AboutUs({key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('RegistrationPage'),
+        title: const Text('About Us'),
       ),
       body: Center(
         child: Column(
           children: <Widget>[
-            Image.asset('./2.png',  height: 1000,
-              width: 500),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushReplacementNamed(context, '/HomePage');
-              },
-              child: const Text('Register'),
-            ),
+            Image.asset('./Ab.png',  height: 1000,
+              width: 500),           
             ElevatedButton(
               onPressed: () {
                 Navigator.pushReplacementNamed(context, '/');

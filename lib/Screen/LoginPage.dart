@@ -52,8 +52,8 @@ class _LoginScreenstate extends State<LoginPage> {
             ),
             ElevatedButton(
                 onPressed:() {
-                  Navigator.pushReplacementNamed(context, '/RegistrationPage');
-            }, child: const Text('Register'),
+                  Navigator.pushReplacementNamed(context, '/AboutUs');
+            }, child: const Text('About Us'),
             ),
           ],
         ),

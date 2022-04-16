@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: <Widget>[
 
-            Image.asset('./3.png',  height: 500,
+            Image.asset('./mock.png',  height: 500,
                 width: 500),
             
             Text(

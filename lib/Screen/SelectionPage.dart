@@ -51,7 +51,7 @@ getLocation() async {
     return Padding(
       padding: const EdgeInsets.all(50),
       child: Text(
-        "Your Weight: " + widget.text + " " + "Your Age: " + widget.text2,
+        "Your Weight: " + widget.text + " kg " + "Your Age: " + widget.text2,
         style: const TextStyle(
           fontWeight: FontWeight.w800,
           letterSpacing: 0.5,
@@ -105,19 +105,19 @@ getLocation() async {
             child: const Text('Go Calculate!'),
           );
   }
-  Widget get_current_address(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(50),
-      child: Text(
-        currentAddress,
-        style: const TextStyle(
-          fontWeight: FontWeight.w800,
-          letterSpacing: 0.5,
-          fontSize: 30,
-        ),
-      ),
-    );
-  }
+  // Widget get_current_address(BuildContext context) {
+  //   return Padding(
+  //     padding: const EdgeInsets.all(50),
+  //     child: Text(
+  //       currentAddress,
+  //       style: const TextStyle(
+  //         fontWeight: FontWeight.w800,
+  //         letterSpacing: 0.5,
+  //         fontSize: 30,
+  //       ),
+  //     ),
+  //   );
+  // }
 
   
   @override
@@ -133,7 +133,7 @@ getLocation() async {
         build_heading(context),
         build_get_button(context),
         get_current_location(context),
-        get_current_address(context),
+        // get_current_address(context),
         go_calculate(context),
           ElevatedButton(
             onPressed: () {

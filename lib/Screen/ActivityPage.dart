@@ -29,7 +29,7 @@ class ActivityPage extends StatelessWidget {
               ),
               validator: (value) {
               if (value.isEmpty) {
-                return 'Enter Weight';
+                return 'Enter Weight in kg';
                }
                 return null;
                },
