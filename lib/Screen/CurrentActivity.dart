@@ -72,7 +72,7 @@ class CurrentActivityState extends State<CurrentActivity>{
       onPressed: () async {
         await getLocation();
       },
-      child: Text('Get Initial Location'),
+      child: Text('Get Destination Location'),
     );
     
   }

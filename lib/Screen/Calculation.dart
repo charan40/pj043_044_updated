@@ -59,7 +59,7 @@ class CalculationState extends State<Calculation> {
     return Padding(
       padding: const EdgeInsets.all(50),
       child: Text(
-        "Your Calories Burn of this activity: " + cal.toStringAsFixed(2) + " k/cal",
+        "Your Calories Burn of this activity: " + cal.toStringAsFixed(2) + " kcal",
         style: const TextStyle(
           fontWeight: FontWeight.w800,
           letterSpacing: 0.5,
